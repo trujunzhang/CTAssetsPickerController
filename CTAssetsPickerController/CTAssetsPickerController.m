@@ -873,8 +873,10 @@ static UIColor *disabledColor;
 
 - (void)drawRect:(CGRect)rect
 {
+    [super drawRect:rect];
+    
     // Image
-    [self.image drawInRect:CGRectMake(0, 0, kThumbnailLength, kThumbnailLength)];
+    [self.image drawInRect:rect];
     
     // Video title
     if ([self.type isEqual:ALAssetTypeVideo])
