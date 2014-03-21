@@ -476,6 +476,8 @@ static const CGSize kPopoverContentSize = {320, 480};
     else if (videoSelected)
         format = (self.selectedAssets.count > 1) ? NSLocalizedString(@"%ld Videos Selected", nil) : NSLocalizedString(@"%ld Video Selected", nil);
     
+    format = NSLocalizedString(@"已选择%ld张", nil);
+
     return [NSString stringWithFormat:format, (long)self.selectedAssets.count];
 }
 
